@@ -1,0 +1,79 @@
+body {
+    font-family: sans-serif;
+    background-color: #010c3f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #010c3f;
+    font-size: 40px;
+}
+
+.App-playlist {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0px auto;
+    
+}
+
+.SearchResults, .Playlist {
+    width: 35vw; 
+    height: 600px;
+    background-color: rgba(1, 12, 63, 0.7);
+    margin: 0 10px;
+}
+
+.SearchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0 5rem 0;
+}
+
+.SearchBar input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.SearchBar button {
+    background-color: purple;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.SearchBar button:hover {
+    background-color: blueviolet;
+}
+
+.Track {
+    display:flex;
+    border-bottom: 1px solid rgba(256, 256, 256, 0.8);
+}
+
+.Track-information {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.Track-action {
+    height: 60px;
+    background-color: violet;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: large;
+    margin: auto;
+}

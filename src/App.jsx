@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import SearchBar from './components/SearchBar';
+import SearchResults from './components/SearchResults';
+import PlayList from './components/Playlist';
+import './components/css/style.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+function App () {
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    const [searchResults, setSearchResults] = useState([
+  {
+    id: 1,
+    name: "Tiny Dancer",
+    artist: "Elton John",
+    album: "Madman Across The Water"
+  },
+  {
+    id: 2,
+    name: "Tiny Dancer",
+    artist: "Tim McGraw",
+    album: "Love Story"
+  }
 
-export default App
+]);
+
+    return (
+        <div className='App'>
+            <h1>ja<span className='highlight'>MM</span>ing</h1>
+        <SearchBar />
+        <div className='App-playlist'>
+            <SearchResults searchResults={searchResults} />
+            
+        </div>
+        </div>
+    );
+};
+
+
+export default App;
